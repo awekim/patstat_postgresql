@@ -1,5 +1,7 @@
 # patstat_postgresql
 
+Written by Keungoui Kim
+
 This page presents the postgrsql code for importing PATSTAT tables to postgresql.
 
 As you know, there are many ways of doing this with .sh codes in Linux,
