@@ -193,16 +193,32 @@ CSV HEADER;
 
 ----------------------------------------------------
 
-CREATE TABLE tls207_pers_appln AS
-(SELECT * FROM tls207_pers_appln1
+CREATE TABLE tls201_appln AS
+(SELECT * FROM tls201_appln1
 UNION
-SELECT * FROM tls207_pers_appln2
+SELECT * FROM tls201_appln2
 UNION
-SELECT * FROM tls207_pers_appln3
+SELECT * FROM tls201_appln3
+UNION
+SELECT * FROM tls201_appln4
+UNION
+SELECT * FROM tls201_appln5
+UNION
+SELECT * FROM tls201_appln6
+UNION
+SELECT * FROM tls201_appln7
+UNION
+SELECT * FROM tls201_appln8
 );
 
 ----------------------------------------------------
 
-DROP TABLE tls207_pers_appln1;
-DROP TABLE tls207_pers_appln2;
-DROP TABLE tls207_pers_appln3;
+DROP TABLE tls201_appln1;
+DROP TABLE tls201_appln2;
+DROP TABLE tls201_appln3;
+DROP TABLE tls201_appln4;
+DROP TABLE tls201_appln5;
+DROP TABLE tls201_appln6;
+DROP TABLE tls201_appln7;
+DROP TABLE tls201_appln8;
+
