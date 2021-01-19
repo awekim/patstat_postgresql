@@ -8,9 +8,11 @@ CREATE TABLE tls207_pers_appln1 (
 ALTER TABLE tls207_pers_appln1 ADD PRIMARY KEY (person_id, appln_id, applt_seq_nr, invt_seq_nr);
 
 COPY tls207_pers_appln1
-from 'C:/Users/aweki/Downloads/tls207_part01.txt'
+from 'C:/Users/aweki/Downloads/tls207_part01_enc.csv'
 DELIMITER ','
-CSV HEADER;
+CSV HEADER; 
+
+-- remove some lines manually
 
 ----------------------------------------------------
 
@@ -24,7 +26,7 @@ CREATE TABLE tls207_pers_appln2 (
 ALTER TABLE tls207_pers_appln2 ADD PRIMARY KEY (person_id, appln_id, applt_seq_nr, invt_seq_nr);
 
 COPY tls207_pers_appln2
-from 'C:/Users/aweki/Downloads/tls207_part02.txt'
+from 'C:/Users/aweki/Downloads/tls207_part02_enc.csv'
 DELIMITER ','
 CSV HEADER;
 
@@ -40,12 +42,11 @@ CREATE TABLE tls207_pers_appln3 (
 ALTER TABLE tls207_pers_appln3 ADD PRIMARY KEY (person_id, appln_id, applt_seq_nr, invt_seq_nr);
 
 COPY tls207_pers_appln3
-from 'C:/Users/aweki/Downloads/tls207_part03.txt'
+from 'C:/Users/aweki/Downloads/tls207_part03_enc.csv'
 DELIMITER ','
 CSV HEADER;
 
 ----------------------------------------------------
-
 
 CREATE TABLE tls207_pers_appln AS
 (SELECT * FROM tls207_pers_appln1
